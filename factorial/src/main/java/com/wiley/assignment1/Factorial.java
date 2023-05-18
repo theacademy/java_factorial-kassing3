@@ -35,25 +35,28 @@ public class Factorial {
 
 		//YOUR CODE STARTS HERE
                 
-                try {
                 
+                
+                //Captured input in try/catch in case User doesn't provide an interger
+                try {
+                    //Stores User's value in an instance variable `num`.  
                     num = scanner.nextInt();
                 
-                
+                    //Conditional statement to check if number is in range.
                     if (num < 0 || num > 10) {
-                    
+                    //if input is our of range, provide a eorr messing and return -1
                     this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
                     return -1;
                     
                     } else {
-                       
+                       //if input is in range, return input value
                         return num;
                         
                     
                     }
                     
                 } catch(Exception e) {
-                    
+                    //if input is invalid and provides an error, an error message will be printed and -1 will be returned
                     this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
                     return -1;
                     
@@ -77,6 +80,7 @@ public class Factorial {
 		int result = 1;
 		//YOUR CODE STARTS HERE
                 
+                // loop created to calucaltor the of factorial of the number provided by user
                 for ( int factorial = 1; factorial <= num; factorial++) {
                     
                     result = result * factorial;
